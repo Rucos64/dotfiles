@@ -1,6 +1,7 @@
 {
 	"layer": "top",
-	"position": "left",
+	// "output": "hyprctl monitors",
+	"position": "right",
 	"width": 38,
 	"spacing": 0,
 
@@ -15,7 +16,7 @@
 	"modules-right": [
 		"hyprland/language",
 		"custom/darkman",
-		// "pulseaudio",
+		"pulseaudio",
 		"group/tray-expander"
 	],
 

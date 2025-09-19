@@ -1,10 +1,10 @@
 export GPG_TTY=$TTY
-export BROWSER=brave
-export EDITOR=nvim
-export MANPAGER='nvim +Man!'
+export BROWSER=zen-browser
+export EDITOR=micro
 export TERM=xterm-256color
 export PAGER="moor -style dracula -no-linenumbers=false"
-export VISUAL=nvim
+export MANPAGER="$PAGER"
+export VISUAL=zeditor
 export BAT_THEME="Dracula"
 
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -28,4 +28,3 @@ export WINEPREFIX="$XDG_DATA_HOME/wine"
 
 export PATH=$PATH:$HOME/dotfiles/scripts:$HOME/.local/bin:$CARGO_HOME/bin:$PNPM_HOME:$XDG_DATA_HOME/npm/bin:$GOPATH/bin:$BUN_HOME
 
-export SOPS_AGE_RECIPIENTS=age1tnkh972ad6ddm6grzmjjnlcq90247r36ywq220y3ytnkw9aqwcsqzwxxu4

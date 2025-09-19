@@ -29,9 +29,6 @@ zstyle ':z4h:direnv:success' notify 'yes'
 
 # Enable ('yes') or disable ('no') automatic teleportation of z4h over
 # SSH when connecting to these hosts.
-zstyle ':z4h:ssh:homelab'   enable 'yes'
-zstyle ':z4h:ssh:coolify'   enable 'yes'
-zstyle ':z4h:ssh:dokploy'      enable 'yes'
 
 zstyle ':z4h:ssh:localhost' enable 'yes'
 
@@ -122,7 +119,6 @@ alias bt='bluetoothctl'
 alias drop='dragon-drop -x -a'
 alias cat='bat -pp'
 alias d='cd ~/dotfiles/'
-alias dev='pnpm dev || bun dev'
 alias fd='fd -HI'
 alias fzf='fzf --preview "bat --color=always {}" --preview-window=right:60%:wrap'
 alias fx='FX_SHOW_SIZE=true FX_LINE_NUMBERS=true fx'
@@ -136,17 +132,11 @@ alias ls='eza -a --icons --group-directories-first -s ext'
 alias lsblk='lsblk -o NAME,MODEL,SIZE,FSTYPE,MOUNTPOINTS,FSUSE%'
 alias lt='eza -T -L=2 -a --icons --group-directories-first'
 alias mkdir='mkdir -p'
-alias n='cd ~/Documents/notes/ && v .'
-alias p='cd ~/projects'
 alias r='paru -Rns'
-alias redis-cli='redis-cli --no-auth-warning'
 alias rmf='rm -rf'
 alias stow='stow --no-folding -Rv'
 alias sv='sudoedit'
-alias udiskmount='udisksctl mount -b'
 alias v='nvim'
-alias wgdown='basename /proc/sys/net/ipv4/conf/*vpn | xargs sudo wg-quick down'
-alias wgup='sudo wg-quick up'
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot

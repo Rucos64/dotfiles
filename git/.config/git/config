@@ -1,11 +1,6 @@
-[user]
-    name = hyperpuncher
-    email = 39203616+hyperpuncher@users.noreply.github.com
 [credential]
     helper = libsecret
 [init]
     defaultBranch = main
 [http]
 	postBuffer = 524288000
-[pull]
-	rebase = true

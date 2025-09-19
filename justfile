@@ -3,17 +3,11 @@ default:
 	just -l
 
 # Bootstrap
-bootstrap: essential ssh paru stow mirrors soft greetd misc
+bootstrap: essential paru stow mirrors soft greetd misc nvidia
 
 # Essentials packages
 essential:
 	sudo pacman -S neovim age zsh stow rustup openssh ccache pigz pbzip2 pacman-contrib foot greetd-tuigreet
-
-# Decrypt & install SSH key
-ssh:
-	echo "Decrypting ssh keys"
-	mkdir -p ~/.ssh
-	age -d -o ~/.ssh/id_ed25519 ./ssh/.ssh/id_ed25519.age
 
 # Build & install AUR helper paru
 paru:
@@ -27,13 +21,11 @@ stow:
 	echo "Linking configs"
 	stow --no-folding -Rv \
 	alacritty \
-	applications \
 	btop \
 	darkman \
 	dunst \
 	foot \
 	git \
-	glow \
 	gtk \
 	home \
 	hyprland \
@@ -42,19 +34,15 @@ stow:
 	mangohud \
 	mpv \
 	mumble \
-	npm \
 	nvim \
-	opencode \
 	pacman \
 	paru \
 	pipewire \
-	pulse \
 	rofi \
 	spotify \
 	ssh \
 	tmux \
 	waybar \
-	wireplumber \
 	zsh
 
 # Update mirror list & refresh DB
@@ -78,6 +66,9 @@ greetd:
 	sudo chmod -R go+r /etc/greetd
 	sudo sed -i '6i auth optional pam_gnome_keyring.so' /etc/pam.d/greetd
 	sudo sed -i '$$a session optional pam_gnome_keyring.so auto_start' /etc/pam.d/greetd
+
+nvidia:
+	./scripts/nvidia.sh
 
 # Miscellaneous tweaks
 misc:
