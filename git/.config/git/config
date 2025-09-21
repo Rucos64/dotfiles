@@ -4,3 +4,6 @@
     defaultBranch = main
 [http]
 	postBuffer = 524288000
+[user]
+	email = maksi.tihan71@gmail.com
+	name = Rucos64
