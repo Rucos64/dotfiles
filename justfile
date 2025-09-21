@@ -3,7 +3,7 @@ default:
 	just -l
 
 # Bootstrap
-bootstrap: essential paru stow mirrors soft greetd misc nvidia
+bootstrap: stow mirrors soft greetd misc nvidia
 
 # Essentials packages
 essential:
@@ -33,7 +33,6 @@ stow:
 	jamesdsp \
 	mangohud \
 	mpv \
-	mumble \
 	nvim \
 	pacman \
 	paru \
